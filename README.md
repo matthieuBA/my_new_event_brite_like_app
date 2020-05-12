@@ -23,6 +23,8 @@ remotly : heroku run rails db:migrate
 
 * Deployment instructions
 <br/>
+<br/>
+<br/>
 to locally deploy app run : <br/>
 git clone https://github.com/matthieuBA/my_new_event_brite_like_app.git<br/>
 cd my_new_event_brite_like_app<br/>
@@ -31,6 +33,9 @@ rails db:migrate<br/>
 rails db:seed<br/>
 rails s -b 0.0.0.0<br/>
 open a browser and go to localhost:3000<br/>
+<br/>
+<br/>
+<br/>
 
 
 

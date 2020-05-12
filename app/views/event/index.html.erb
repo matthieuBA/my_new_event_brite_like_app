@@ -1,13 +1,25 @@
 
 <% @events.each do |event| %>
-start_date:<%= event.start_date %><br />
-duration:<%= event.duration %><br />
-title:<%= event.title %><br />
-description:<%= event.description %><br />
-price:<%= event.price %><br />
-location:<%= event.location %><br />
-created_at:<%= event.created_at %><br />
-updated_at:<%= event.updated_at %><br />
-link : <%= event.id %>
-<br /><br />
+<div class="list-group">
+
+  <a href="<%= event_path(event.id) %>" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">title : <%= event.title %></h5>
+      
+      <small class="text-muted"><%= event.updated_at %></small>
+    </div>
+    
+
+    <p class="mb-1">description : <%= event.description %></p>
+    <p class="mb-1">price : <%= event.price %></p>
+    <p class="mb-1">location : <%= event.location %></p>
+    <p class="mb-1">duration : <%= event.duration %></p>
+    <p class="mb-1">start_date : <%= event.start_date %></p>
+    </a>
+<% attendances_count= Attendance.all.count %> 
+<a href="/event/<%= event.id %>" class="list-group-item list-group-item-action"> Participants : <%= attendances_count%></a>
+</div>
+<br/>
 <%end%>
+
+

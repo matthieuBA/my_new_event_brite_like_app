@@ -6,7 +6,7 @@ class EventController < ApplicationController
   def show
     @event = params[:id]
     @attendances=Attendance.where(event_id: params[:id])
-    @attendances_count=@attendances.count
+    @attendances_count=0
   end
   def new
   end

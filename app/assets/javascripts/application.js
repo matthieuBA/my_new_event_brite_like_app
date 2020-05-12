@@ -14,3 +14,4 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+window.setTimeout("document.getElementById('close').style.display='none';", 2000);

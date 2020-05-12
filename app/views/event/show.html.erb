@@ -1,4 +1,5 @@
 <% @event = Event.find_by(id: @event) %>
+<% @user = User.find_by(id: @event.user_id) %>
 start_date:<%= @event.start_date %><br />
 duration:<%= @event.duration %><br />
 title:<%= @event.title %><br />
@@ -8,3 +9,5 @@ location:<%= @event.location %><br />
 created_at:<%= @event.created_at %><br />
 updated_at:<%= @event.updated_at %><br />
 participants: <%= @attendances_count %><br />
+admin user: <%= @user.email %><br />
+

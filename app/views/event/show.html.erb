@@ -1,0 +1,9 @@
+<% @event = Event.find_by(id: @event) %>
+start_date:<%= @event.start_date %><br />
+duration:<%= @event.duration %><br />
+title:<%= @event.title %><br />
+description:<%= @event.description %><br />
+price:<%= @event.price %><br />
+location:<%= @event.location %><br />
+created_at:<%= @event.created_at %><br />
+updated_at:<%= @event.updated_at %><br />

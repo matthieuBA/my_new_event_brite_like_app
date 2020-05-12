@@ -1,0 +1,26 @@
+
+<% flash.each do |key, value| %>
+<div id="close" class="alert" role="alert">
+  <%= value %>
+</div>
+
+<% end %>
+
+<form action= <%= event_index_path %> method="POST">
+  <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+  <p>Event Title : </p>
+  <input type="text" name="event_title"><br/>
+  <p>Event Description : </p>
+  <input type="text" name="event_description"><br/>
+    <p>Event Start Date : </p>
+  <input type="text" name="event_start_date"><br/>
+    <p>Event Duration : </p>
+  <input type="text" name="event_duration"><br/>
+    <p>Event Price : </p>
+  <input type="text" name="event_price"><br/>
+    <p>Event Location : </p>
+  <input type="text" name="event_location"><br/>
+  <input type="submit" value="create event"><br/>
+
+  
+</form>

@@ -1,0 +1,19 @@
+<h1>Sign Up</h1>
+<%= form_for @user do |f|%> 
+<%= f.label :first_name%><br> 
+<%= f.text_field :first_name%><br> 
+<%= f.label :last_name%><br> 
+<%= f.text_field :last_name%><br> 
+<%= f.label :email%><br> 
+<%= f.text_field :email%><br> 
+<%= f.label :password%><br> 
+<%= f.password_field :password%><br> 
+<%= f.label :city_id%><br> 
+<%sample_city=City.all.sample%>
+<%= f.text_field :city_id, value: sample_city.id%>  <%=sample_city.name%> <br> 
+<%= f.label :remember_check%><br> 
+<%= f.check_box :remember_check,{:checked=>true}%><br> 
+<%= f.submit %>
+
+<%end%>
+

@@ -1,0 +1,9 @@
+<% @users.order(:first_name).each do |user| %>
+<div class="card" >
+  <div class="card-body">
+    User : <a class="card-link"><%= link_to "#{user.first_name} #{user.last_name}",user_path(user.id) %></a><br/>
+    Descripton : <%= user.description%><br/>
+    E-mail : <%= user.email%><br/>
+  </div>
+</div>
+<% end %>

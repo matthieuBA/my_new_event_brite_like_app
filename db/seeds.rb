@@ -22,7 +22,7 @@ require "faker"
   user = User.create!(first_name: first_name, last_name: last_name, description: Faker::DcComics.title, email: first_name+"."+last_name+"@yopmail.com",password:first_name+"."+last_name )
   puts "event #{i} created"
   puts "#{i} errors"
-  event = Event.create!(start_date:Time.now+(rand(1..9999)*3600),duration:10,title:Faker::DcComics.title,description:Faker::ChuckNorris.fact,price:rand(1..100),location:Faker::Address.city,user_id:User.all.sample.id)
+  event = Event.create!(start_date:Time.now+(rand(1..9999)*3600),duration:rand(1..10)*5,title:Faker::DcComics.title,description:Faker::ChuckNorris.fact,price:rand(1..100),location:Faker::Address.city,user_id:User.all.sample.id)
   puts event.errors
 end
 

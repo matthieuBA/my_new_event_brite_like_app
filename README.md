@@ -22,14 +22,15 @@ remotly : heroku run rails db:migrate
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-to locally deploy app run : 
-git clone https://github.com/matthieuBA/my_new_event_brite_like_app.git
-cd my_new_event_brite_like_app
-rails db:create
-rails db:migrate
-rails db:seed
-rails s -b 0.0.0.0
-open a browser and go to localhost:3000
+<br/>
+to locally deploy app run : <br/>
+git clone https://github.com/matthieuBA/my_new_event_brite_like_app.git<br/>
+cd my_new_event_brite_like_app<br/>
+rails db:create<br/>
+rails db:migrate<br/>
+rails db:seed<br/>
+rails s -b 0.0.0.0<br/>
+open a browser and go to localhost:3000<br/>
 
 
 

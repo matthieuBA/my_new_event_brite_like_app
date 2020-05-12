@@ -14,7 +14,51 @@
     <p>Event Location : </p>
   <input type="text" name="event_location"><br/>
   <input type="submit" value="create event"><br/>
-  
-
-  
 </form>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <br><br><br>
+      <%= form_for("event", :url => new_event_path, html: { method: :post }) do |f| %>
+        <h1 class="h3 mb-3 font-weight-normal text-center">Create a new Event</h1>
+
+        <div class="form-group">
+          <%= f.label :event_title %><br />
+          <%= f.text_field :title, autofocus: true,  class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :event_description %><br />
+          <%= f.text_field :description, autofocus: true,  class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :event_start_date %><br />
+          <%= f.text_field :start_date, autofocus: true,  class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :event_duration %><br />
+          <%= f.text_field :duration, autofocus: true,  class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :event_price %><br />
+          <%= f.text_field :price, autofocus: true,  class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :event_location %><br />
+          <%= f.text_field :location, autofocus: true,  class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit "create event", class: "btn btn-lg btn-primary btn-block" %>
+        </div>
+      <% end %>
+
+
+    </div>
+  </div>
+</div>
+
+
+event = Event.create(title: params[:event_title], description: params[:event_description], start_date: params[:event_start_date],duration: params[:event_duration],price: params[:event_price],location: params[:event_location], user_id: current_user.id)

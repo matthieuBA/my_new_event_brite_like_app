@@ -1,17 +1,17 @@
 
 <form action= <%= event_index_path %> method="POST">
   <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
-  <p>Event Title : </p>
+  <p>Event Title (min 6): </p>
   <input type="text" name="event_title"><br/>
-  <p>Event Description : </p>
+  <p>Event Description (min 20): </p>
   <input type="text" name="event_description"><br/>
-    <p>Event Start Date : </p>
+    <p>Event Start Date (futur only): </p>
   <input type="text" name="event_start_date"><br/>
-    <p>Event Duration : </p>
+    <p>Event Duration (int multiple of 5): </p>
   <input type="text" name="event_duration"><br/>
-    <p>Event Price : </p>
+    <p>Event Price (int): </p>
   <input type="text" name="event_price"><br/>
-    <p>Event Location : </p>
+    <p>Event Location (presence): </p>
   <input type="text" name="event_location"><br/>
   <input type="submit" value="create event"><br/>
 </form>

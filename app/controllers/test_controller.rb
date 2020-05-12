@@ -4,7 +4,7 @@ class TestController < ApplicationController
       puts "#"*100
       puts user.errors
       puts "#"*100
-       UserMailer.welcome_email(user).deliver_now
+      #  UserMailer.welcome_email(user).deliver_now
       #  UserMailer.attendance_email(user).deliver_now
        
   end

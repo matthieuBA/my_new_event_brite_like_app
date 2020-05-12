@@ -1,14 +1,22 @@
 class EventController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :new]
   def index
     @events = Event.all
   end
   def show
     @event = params[:id]
+    @attendances=Attendance.where(event_id: params[:id])
+    @attendances_count=@attendances.count
   end
+  def new
+  end
+
+
 
   def create
 
-    @event = Event.create(title: params[:event_title], description: params[:event_description], start_date: params[:event_start_date],duration: params[:event_duration],price: params[:event_price],location: params[:event_location])
+
+    @event = Event.create(title: params[:event_title], description: params[:event_description], start_date: params[:event_start_date],duration: params[:event_duration],price: params[:event_price],location: params[:event_location], user_id: current_user.id)
     puts "#"*100
     @event.errors
     puts "#"*100

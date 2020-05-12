@@ -19,6 +19,6 @@ require "faker"
   
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
-  user = User.create!(first_name: first_name, last_name: last_name, description: Faker::DcComics.title, email: first_name+"."+last_name+"@yopmail.com" )
+  user = User.create!(first_name: first_name, last_name: last_name, description: Faker::DcComics.title, email: first_name+"."+last_name+"@yopmail.com",password:first_name+"."+last_name )
 end
 

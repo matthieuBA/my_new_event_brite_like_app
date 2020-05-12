@@ -18,5 +18,6 @@ ActionMailer::Base.smtp_settings =   {
     enable_starttls_auto: true
   }
   
+  
 # Initialize the Rails application.
 Rails.application.initialize!

@@ -5,12 +5,9 @@ class EventController < ApplicationController
   end
   def show
     @event = params[:id]
-    @attendances=Attendance.where(event_id: params[:id])
-    @attendances_count=0
   end
   def new
   end
-
 
 
   def create
@@ -18,7 +15,7 @@ class EventController < ApplicationController
 
     @event = Event.create(title: params[:event_title], description: params[:event_description], start_date: params[:event_start_date],duration: params[:event_duration],price: params[:event_price],location: params[:event_location], user_id: current_user.id)
     puts "#"*100
-    @event.errors
+    puts @event.errors
     puts "#"*100
     
     if @event.save # essaie de sauvegarder en base @gossip

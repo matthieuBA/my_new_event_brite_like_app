@@ -66,3 +66,5 @@ gem "devise", "~> 4.7"
 gem "table_print", "~> 1.5"
 
 gem "faker", "~> 2.11"
+
+gem 'letter_opener'
